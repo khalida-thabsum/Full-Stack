@@ -1,0 +1,11 @@
+{
+  "name": "node-express-practice",
+  "version": "1.0.0",
+  "description": "http module with streams, Express auth/role middleware, and a blood donor REST API",
+  "scripts": {
+    "http": "node basic-http-server.js",
+    "middleware": "node express-middleware-demo.js",
+    "crud": "node rest-api-crud.js"
+  },
+  "dependencies": { "express": "^4.19.2" }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "hostel-complaint-api",
+  "version": "1.0.0",
+  "description": "REST API for raising and tracking hostel complaints (Express + MongoDB)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node scripts/seed.js",
+    "smoke": "node scripts/smoke-test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^7.6.3"
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  --sand: #f5ecdc;
+  --rock: #5b4636;
+  --clay: #b5542c;
+  --sky: #2d6a8f;
+  --ink: #2a211b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Cambria, Georgia, serif; color: var(--ink); background: var(--sand); line-height: 1.6; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+.top { background: var(--rock); }
+.top-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; padding-bottom: 12px; }
+.mark { color: #fff; font-weight: bold; letter-spacing: 0.5px; }
+.top nav a { color: #f5ecdc; text-decoration: none; margin-left: 18px; }
+.top nav a:hover { text-decoration: underline; }
+
+.intro { background: linear-gradient(180deg, #e9b872 0%, #d8834a 55%, #b5542c 100%); color: #fff; padding: 70px 0 60px; }
+.intro h1 { font-size: 2.4rem; line-height: 1.15; max-width: 720px; margin: 0 0 12px; }
+.intro p { max-width: 600px; font-size: 1.1rem; margin: 0; }
+
+h2 { color: var(--clay); font-size: 1.7rem; margin: 44px 0 16px; }
+
+.steps { list-style: none; padding: 0; margin: 0; display: flex; gap: 0; overflow-x: auto; }
+.steps li { flex: 1 0 150px; background: #fff; border-top: 4px solid var(--clay); padding: 12px 14px; border-right: 1px dashed #d9c7ad; }
+.steps li span { display: block; font-weight: bold; color: var(--clay); }
+
+.stops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.stop { margin: 0; background: #fff; }
+.stop:first-child { grid-column: span 2; }
+.pic { height: 170px; }
+.stop:first-child .pic { height: 240px; }
+.stop figcaption { padding: 12px 16px 16px; }
+.stop h3 { margin: 0 0 4px; }
+.stop p { margin: 0; }
+.orvakal   { background: radial-gradient(circle at 30% 70%, #8c7b6b 0 18%, transparent 19%), radial-gradient(circle at 60% 60%, #6f5f50 0 22%, transparent 23%), linear-gradient(#f2c987, #e3a15d 60%, #4f7f8f 60%); }
+.belum     { background: radial-gradient(ellipse at 50% 100%, #1b1410 0 45%, transparent 46%), linear-gradient(#6b4e3a, #3a2a20); }
+.lepakshi  { background: repeating-linear-gradient(90deg, #c9a16b 0 18px, #b48a55 18px 22px), #c9a16b; }
+.penukonda { background: linear-gradient(160deg, transparent 55%, #6c5a49 55%), linear-gradient(#bcd4de, #e7d4b5); }
+.tirumala  { background: linear-gradient(170deg, #f7d27a 0 35%, #3f6e4f 35% 70%, #2b4f39 70%); }
+
+.tip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.tip { border-left: 4px solid var(--sky); background: #fff; padding: 10px 16px; }
+.tip h3 { margin: 0 0 4px; color: var(--sky); }
+.tip p { margin: 0; }
+
+.book form { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; padding-bottom: 40px; }
+.book fieldset { flex: 1 1 280px; border: 1px solid #d9c7ad; background: #fff; display: flex; flex-direction: column; gap: 6px; }
+.book legend { font-weight: bold; color: var(--rock); }
+.book input, .book select { padding: 8px; border: 1px solid #c8b394; font: inherit; }
+.book button { padding: 12px 26px; background: var(--clay); color: #fff; border: none; font: inherit; cursor: pointer; }
+.book button:hover { background: #923f1d; }
+
+.bottom { background: var(--ink); color: #d9c7ad; text-align: center; padding: 16px; }
+
+@media (max-width: 760px) {
+  .stops, .tip-grid { grid-template-columns: 1fr; }
+  .stop:first-child { grid-column: auto; }
+  .top-inner { flex-direction: column; gap: 6px; }
+  .top nav a { margin: 0 8px; }
+  .intro h1 { font-size: 1.8rem; }
+}

@@ -1,0 +1,29 @@
+body { margin: 0; font-family: Georgia, serif; background: #fbf6ee; color: #3a2a1d; }
+.page { max-width: 900px; margin: 0 auto; padding: 24px; }
+.masthead { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #c8763b; margin-bottom: 20px; }
+.masthead h1 { color: #9c4a1a; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.recipe { background: #fff; padding: 14px 16px; border: 1px solid #ecdcc6; display: flex; flex-direction: column; }
+.recipe h2 { margin: 8px 0 2px; font-size: 1.2rem; }
+.recipe-top { display: flex; justify-content: space-between; align-items: center; }
+.time { font-size: 0.85rem; color: #8a6f58; }
+.region { margin: 0; color: #8a6f58; font-style: italic; }
+.view { margin-top: auto; align-self: flex-start; background: #c8763b; color: #fff; border: none; padding: 6px 12px; cursor: pointer; font-family: inherit; }
+.food-badge { width: 16px; height: 16px; border: 2px solid; display: inline-flex; align-items: center; justify-content: center; }
+.food-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.veg { color: #2e7d32; }
+.nonveg { color: #b71c1c; }
+.spice { margin: 8px 0 12px; }
+.chilli { color: #ddd; margin-right: 2px; }
+.chilli.on { color: #d32f2f; }
+.backdrop { position: fixed; inset: 0; background: rgba(40, 25, 10, 0.5); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.modal { background: #fff; max-width: 460px; width: 100%; padding: 16px 22px; max-height: 85vh; overflow-y: auto; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; }
+.modal-head button { background: none; border: none; font-size: 1.6rem; cursor: pointer; }
+.ingredients { list-style: none; padding: 0; }
+.toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.toggle input { display: none; }
+.track { width: 36px; height: 20px; background: #ccc; border-radius: 10px; position: relative; transition: background 0.2s; }
+.knob { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; background: #fff; border-radius: 50%; transition: left 0.2s; }
+.toggle input:checked + .track { background: #2e7d32; }
+.toggle input:checked + .track .knob { left: 18px; }

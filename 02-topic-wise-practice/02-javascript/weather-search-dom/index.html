@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>City Weather</h1>
+    <div class="search">
+      <input id="city" placeholder="Type a city, e.g. Visakhapatnam" autocomplete="off">
+      <ul id="suggestions" hidden></ul>
+    </div>
+    <p id="msg"></p>
+    <section id="card" hidden>
+      <h2 id="place"></h2>
+      <p class="temp"><span id="temp"></span>&deg;C</p>
+      <p id="desc"></p>
+      <ul class="facts">
+        <li>Wind <b id="wind"></b> km/h</li>
+        <li>Humidity <b id="hum"></b>%</li>
+      </ul>
+      <h3>Next 5 days</h3>
+      <div id="days" class="days"></div>
+    </section>
+    <h3>Recent searches</h3>
+    <div id="recent" class="recent"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

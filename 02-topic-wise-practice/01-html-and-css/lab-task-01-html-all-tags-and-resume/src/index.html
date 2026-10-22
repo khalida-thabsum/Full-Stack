@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice page covering HTML elements">
+  <meta name="author" content="Khalida Thabsum">
+  <title>Practising HTML Elements</title>
+</head>
+<body>
+  <h1>Practising HTML Elements</h1>
+  <p><a href="resume.html">Open my resume &raquo;</a></p>
+
+  <!-- Table of contents using an ordered list of in-page links -->
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#headings">Headings and paragraphs</a></li>
+    <li><a href="#format">Formatting</a></li>
+    <li><a href="#entities">Character entities</a></li>
+    <li><a href="#lists">Lists</a></li>
+    <li><a href="#links">Links and images</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#form">Form inputs</a></li>
+    <li><a href="#containers">div, span and semantic containers</a></li>
+  </ol>
+  <hr>
+
+  <h2 id="headings">1. Headings and paragraphs</h2>
+  <h1>h1 - largest</h1>
+  <h3>h3 - medium</h3>
+  <h6>h6 - smallest</h6>
+  <p title="Hover text from the title attribute">This paragraph has a title attribute; hover over it.</p>
+  <p>Paragraph with a<br>line break and   extra   spaces that the browser collapses.</p>
+  <pre>Inside pre,   spaces
+and line breaks   are kept.</pre>
+
+  <h2 id="format">2. Formatting</h2>
+  <p><b>Bold</b> &middot; <strong>Strong</strong> &middot; <i>Italic</i> &middot; <em>Emphasis</em> &middot; <u>Underline</u> &middot; <s>Strikethrough</s> &middot; <mark>Mark</mark> &middot; <small>Small</small></p>
+  <p>Water is H<sub>2</sub>O and E = mc<sup>2</sup>.</p>
+  <p><q>Short quotation</q> and a longer one:</p>
+  <blockquote>Be the change that you wish to see in the world. &mdash; Mahatma Gandhi</blockquote>
+  <p><dfn>HTML</dfn> is the language used to structure web pages.</p>
+  <p><bdo dir="rtl">This text is shown right to left.</bdo></p>
+
+  <h2 id="entities">3. Character entities</h2>
+  <table border="1" cellpadding="5">
+    <tr><th>Entity</th><th>Shows</th></tr>
+    <tr><td>&amp;lt; &amp;gt;</td><td>&lt; &gt;</td></tr>
+    <tr><td>&amp;copy; &amp;reg; &amp;trade;</td><td>&copy; &reg; &trade;</td></tr>
+    <tr><td>&amp;rupee; (&amp;#8377;)</td><td>&#8377;</td></tr>
+    <tr><td>&amp;hearts; &amp;deg;</td><td>&hearts; 30&deg;C</td></tr>
+  </table>
+
+  <h2 id="lists">4. Lists</h2>
+  <ul type="circle">
+    <li>Circle bullets</li>
+    <li>Second item</li>
+  </ul>
+  <ol type="1" reversed>
+    <li>Countdown three</li>
+    <li>Countdown two</li>
+    <li>Countdown one</li>
+  </ol>
+  <dl>
+    <dt>Client</dt><dd>The browser that sends requests.</dd>
+    <dt>Server</dt><dd>The program that answers them.</dd>
+  </dl>
+
+  <h2 id="links">5. Links and images</h2>
+  <p>
+    <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN (new tab)</a> |
+    <a href="tel:+919876543210">Call</a> |
+    <a href="sample.svg" download>Download the image</a> |
+    <a href="#top">Back to top</a>
+  </p>
+  <p>
+    <a href="sample.svg"><img src="sample.svg" alt="Drawing of a lotus flower" width="160" height="120"></a>
+    (the image is also a link)
+  </p>
+
+  <h2 id="table">6. Table</h2>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <caption><b>Fee structure (per year)</b></caption>
+    <colgroup>
+      <col style="background: #f3f0ff">
+      <col span="2">
+    </colgroup>
+    <tr><th>Item</th><th>Day scholar</th><th>Hostel</th></tr>
+    <tr><td>Tuition</td><td colspan="2" align="center">&#8377; 1,05,000</td></tr>
+    <tr><td>Hostel and mess</td><td>-</td><td>&#8377; 90,000</td></tr>
+    <tr><td>Transport</td><td>&#8377; 30,000</td><td>-</td></tr>
+  </table>
+
+  <h2 id="form">7. Form inputs</h2>
+  <form action="#">
+    <p>Text: <input type="text" value="default value" maxlength="20"></p>
+    <p>Search: <input type="search" placeholder="Search..."></p>
+    <p>Number: <input type="number" min="0" max="10" step="2"></p>
+    <p>Month: <input type="month"> Week: <input type="week"> Time: <input type="time"></p>
+    <p>Disabled: <input type="text" value="cannot edit" disabled> Read-only: <input type="text" value="read only" readonly></p>
+    <p>Multiple select:
+      <select multiple size="3">
+        <optgroup label="Frontend">
+          <option>HTML</option>
+          <option>CSS</option>
+        </optgroup>
+        <optgroup label="Backend">
+          <option>Node</option>
+          <option>Express</option>
+        </optgroup>
+      </select>
+    </p>
+    <p><label><input type="checkbox" checked> I agree</label></p>
+    <p><input type="submit" value="Submit"> <input type="reset"> <input type="button" value="Plain button"></p>
+  </form>
+
+  <h2 id="containers">8. Containers</h2>
+  <div style="border: 1px solid #999; padding: 8px;">
+    A <code>div</code> is a block container. A <span style="color: crimson;">span</span> is an inline container.
+  </div>
+  <header><b>header</b></header>
+  <nav><b>nav</b></nav>
+  <main>
+    <article><b>article</b>
+      <section><b>section</b></section>
+    </article>
+    <aside><b>aside</b></aside>
+  </main>
+  <footer><b>footer</b> &copy; 2026 Khalida Thabsum</footer>
+</body>
+</html>

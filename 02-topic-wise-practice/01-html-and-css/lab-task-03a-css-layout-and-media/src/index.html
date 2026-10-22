@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout, Positioning and Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <!-- Sticky side menu -->
+    <aside class="side">
+      <h2>Sections</h2>
+      <a href="#holy-grail">Holy grail layout</a>
+      <a href="#gallery">Flex gallery</a>
+      <a href="#tooltip">Tooltip</a>
+      <a href="#overlay">Overlay</a>
+      <a href="#media">Media</a>
+    </aside>
+
+    <div class="main">
+      <h1>CSS Layout, Positioning and Media</h1>
+
+      <section id="holy-grail">
+        <h2>1. Holy grail layout with Flexbox</h2>
+        <div class="hg">
+          <div class="hg-header">header</div>
+          <div class="hg-body">
+            <div class="hg-nav">nav<br>(fixed width)</div>
+            <div class="hg-content">content<br>(flex: 1 grows to fill)</div>
+            <div class="hg-ads">aside<br>(fixed width)</div>
+          </div>
+          <div class="hg-footer">footer</div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h2>2. Gallery with flex-wrap, flex-basis and gap</h2>
+        <div class="gallery">
+          <div class="tile t1">1</div><div class="tile t2">2</div><div class="tile t3">3</div>
+          <div class="tile t4">4</div><div class="tile t5">5</div><div class="tile t6">6</div>
+        </div>
+        <p class="note">Resize the window: tiles wrap onto new rows and stretch to fill each row.</p>
+      </section>
+
+      <section id="tooltip">
+        <h2>3. Tooltip with relative and absolute positioning</h2>
+        <p>
+          Hover over
+          <span class="tip">this word
+            <span class="tip-text">The tooltip is absolutely positioned inside a relatively positioned span.</span>
+          </span>
+          to see the tooltip.
+        </p>
+        <div class="corners">
+          <span class="c tl">top-left</span>
+          <span class="c tr">top-right</span>
+          <span class="c bl">bottom-left</span>
+          <span class="c br">bottom-right</span>
+          <span class="c mid">centred with transform</span>
+        </div>
+      </section>
+
+      <section id="overlay">
+        <h2>4. Overlay with position: fixed</h2>
+        <a class="open" href="#popup">Open overlay</a>
+        <div id="popup" class="overlay">
+          <div class="dialog">
+            <h3>Fixed overlay</h3>
+            <p>This box is shown with the <code>:target</code> selector, no JavaScript needed.</p>
+            <a href="#overlay" class="close">Close</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="media">
+        <h2>5. Media</h2>
+        <h3>YouTube video in an iframe (responsive 16:9)</h3>
+        <div class="ratio">
+          <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" title="HTML crash course video" allowfullscreen></iframe>
+        </div>
+        <h3>Local audio</h3>
+        <audio controls preload="none">
+          <source src="media/track.mp3" type="audio/mpeg">
+          Your browser cannot play this audio.
+        </audio>
+        <h3>Local video with captions track</h3>
+        <video controls width="420">
+          <source src="media/demo.mp4" type="video/mp4">
+          <track src="media/demo-en.vtt" kind="captions" srclang="en" label="English">
+          Your browser cannot play this video.
+        </video>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
